@@ -1,0 +1,12 @@
+,,,"Note that these figures are generated using a formula that protects against any artificial inflation of chart positions.",
+Position,"Track Name",Artist,Streams,URL
+1,"Mood (feat. Iann Dior)",24kGoldn,6065515,https://open.spotify.com/track/3tjFYV6RSFtuktYl3ZtYcq
+2,"WAP (feat. Megan Thee Stallion)","Cardi B",5603667,https://open.spotify.com/track/4Oun2ylbjFKMPTiaSbbCih
+3,Hawái,Maluma,4809247,https://open.spotify.com/track/1yoMvmasuxZfqHEipJhRbp
+4,"Lemonade (feat. Gunna, Don Toliver & NAV)","Internet Money",4341923,https://open.spotify.com/track/7hxHWCCAIIxFLCzvDgnQHX
+5,Dynamite,BTS,4117542,https://open.spotify.com/track/0t1kP63rueHleOhQkYSXFY
+6,"Watermelon Sugar","Harry Styles",3630648,https://open.spotify.com/track/6UelLqGlWMcVH1E5c4H7lY
+7,"Holy (feat. Chance The Rapper)","Justin Bieber",3615715,https://open.spotify.com/track/5u1n1kITHCxxp8twBcZxWy
+8,"Blinding Lights","The Weeknd",3614994,https://open.spotify.com/track/0VjIjW4GlUZAMYd2vXMi3b
+9,"Savage Love (Laxed - Siren Beat)","Jawsh 685",3324011,https://open.spotify.com/track/1xQ6trAsedVPCdbtDAmk0c
+10,"For The Night (feat. Lil Baby & DaBaby)","Pop Smoke",3304564,https://open.spotify.com/track/0PvFJmanyNQMseIFrU708S
