@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #e8bf6a;}
+.s1 { color: #bababa;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #a5c261;}
+.s4 { color: #a9b7c6;}
+.s5 { color: #cc7832;}
+.s6 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!doctype </span><span class="s1">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s1">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+  <span class="s0">&lt;meta </span><span class="s1">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;meta </span><span class="s1">name</span><span class="s3">=&quot;viewport&quot;</span>
+        <span class="s1">content</span><span class="s3">=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;meta </span><span class="s1">http-equiv</span><span class="s3">=&quot;X-UA-Compatible&quot; </span><span class="s1">content</span><span class="s3">=&quot;ie=edge&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;link </span><span class="s1">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s1">href</span><span class="s3">=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&quot; </span><span class="s1">integrity</span><span class="s3">=&quot;sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh&quot; </span><span class="s1">crossorigin</span><span class="s3">=&quot;anonymous&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;title&gt;</span><span class="s4">CONTACTS INFORMATION</span><span class="s0">&lt;/title&gt;</span>
+  <span class="s0">&lt;style&gt;</span>
+    <span class="s4">[</span><span class="s0">v-cloak</span><span class="s4">] {</span>
+      <span class="s1">display</span><span class="s4">: </span><span class="s3">none</span><span class="s5">;</span>
+    <span class="s4">}</span>
+  <span class="s0">&lt;/style&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;div </span><span class="s1">class</span><span class="s3">=&quot;container pt-3&quot; </span><span class="s1">id</span><span class="s3">=&quot;app&quot; </span><span class="s1">v-cloak</span><span class="s0">&gt; </span><span class="s6">&lt;!--attribute v cloak means if the web want started yet dont show the blove block div--&gt;</span>
+  <span class="s0">&lt;h1&gt;</span><span class="s4">CONTACT INFORMATION</span><span class="s0">&lt;/h1&gt;</span>
+  <span class="s0">&lt;h2&gt;</span><span class="s4">This is a quick phone book for everyday usage</span><span class="s0">&lt;/h2&gt;</span>
+  <span class="s0">&lt;h2&gt;&lt;/h2&gt;</span>
+
+  <span class="s0">&lt;form </span><span class="s1">class</span><span class="s3">=&quot;form-inline mb-3&quot; </span><span class="s1">@submit.prevent</span><span class="s3">=&quot;createContact&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s1">class</span><span class="s3">=&quot;form-group mr-5&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;label </span><span class="s1">for</span><span class="s3">=&quot;name&quot; </span><span class="s1">class</span><span class="s3">=&quot;mr-3&quot;</span><span class="s0">&gt;</span><span class="s4">Name</span><span class="s0">&lt;/label&gt;</span>
+      <span class="s0">&lt;input </span><span class="s1">type</span><span class="s3">=&quot;text&quot; </span><span class="s1">class</span><span class="s3">=&quot;form-control&quot; </span><span class="s1">id</span><span class="s3">=&quot;name&quot; </span><span class="s1">v-model</span><span class="s3">=&quot;form.name&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div </span><span class="s1">class</span><span class="s3">=&quot;form-group mr-5&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;label </span><span class="s1">for</span><span class="s3">=&quot;value&quot; </span><span class="s1">class</span><span class="s3">=&quot;mr-3&quot;</span><span class="s0">&gt;</span><span class="s4">Phone number</span><span class="s0">&lt;/label&gt;</span>
+      <span class="s0">&lt;input </span><span class="s1">type</span><span class="s3">=&quot;text&quot; </span><span class="s1">class</span><span class="s3">=&quot;form-control&quot; </span><span class="s1">id</span><span class="s3">=&quot;value&quot; </span><span class="s1">v-model</span><span class="s3">=&quot;form.value&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;button </span><span class="s1">class</span><span class="s3">=&quot;btn btn-primary&quot; </span><span class="s1">type</span><span class="s3">=&quot;submit&quot; </span><span class="s1">:disabled</span><span class="s3">=&quot;!canCreate&quot;</span><span class="s0">&gt;</span><span class="s4">Create</span><span class="s0">&lt;/button&gt;</span>
+  <span class="s0">&lt;/form&gt;</span>
+
+  <span class="s0">&lt;div </span><span class="s1">v-if</span><span class="s3">=&quot;loading&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;loader /&gt;</span>
+  <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;div </span><span class="s1">v-else-if</span><span class="s3">=&quot;contacts.length&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;div </span><span class="s1">class</span><span class="s3">=&quot;card mb-3&quot; </span><span class="s1">v-for</span><span class="s3">=&quot;contact in contacts&quot;</span><span class="s0">&gt;</span>
+      <span class="s0">&lt;div </span><span class="s1">class</span><span class="s3">=&quot;card-body&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;h5 </span><span class="s1">class</span><span class="s3">=&quot;card-title&quot; </span><span class="s1">:style</span><span class="s3">=&quot;{color: contact.marked ? 'red' : 'black'}&quot;</span><span class="s0">&gt;</span><span class="s4">{{contact.name}}</span><span class="s0">&lt;/h5&gt;</span><span class="s6">&lt;!--dymanic style fot element--&gt;</span>
+        <span class="s0">&lt;p </span><span class="s1">class</span><span class="s3">=&quot;card-text&quot;</span><span class="s0">&gt;</span><span class="s4">{{contact.value}}</span><span class="s0">&lt;/p&gt;</span>
+        <span class="s0">&lt;button </span><span class="s1">class</span><span class="s3">=&quot;btn btn-primary&quot; </span><span class="s1">@click</span><span class="s3">=&quot;markContact(contact.id)&quot; </span><span class="s1">:disabled</span><span class="s3">=&quot;contact.marked&quot;</span><span class="s0">&gt;</span><span class="s4">Highlight</span><span class="s0">&lt;/button&gt; </span><span class="s6">&lt;!-- blocked if contact marked--&gt;</span>
+        <span class="s0">&lt;button </span><span class="s1">class</span><span class="s3">=&quot;btn btn-danger&quot; </span><span class="s1">@click</span><span class="s3">=&quot;removeContact(contact.id)&quot;</span><span class="s0">&gt;</span><span class="s4">Delete</span><span class="s0">&lt;/button&gt;</span>
+      <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;p </span><span class="s1">v-else</span><span class="s0">&gt;</span><span class="s4">No contacts have been added</span><span class="s0">&lt;/p&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+<span class="s0">&lt;script </span><span class="s1">type</span><span class="s3">=&quot;module&quot; </span><span class="s1">src</span><span class="s3">=&quot;frontend.js&quot;</span><span class="s0">&gt;&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>app.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app.js</font>
+</center></td></tr></table>
+<pre><span class="s0">const </span><span class="s1">express = require(</span><span class="s2">'express'</span><span class="s1">)</span>
+<span class="s0">const </span><span class="s1">path = require(</span><span class="s2">'path'</span><span class="s1">)</span>
+<span class="s0">const </span><span class="s1">{v4} = require(</span><span class="s2">'uuid'</span><span class="s1">)</span>
+<span class="s0">const </span><span class="s1">app = express()</span>
+
+<span class="s0">let </span><span class="s1">CONTACTS = [</span>
+  <span class="s1">{id: v4()</span><span class="s0">, </span><span class="s1">name: </span><span class="s2">'Solomiya'</span><span class="s0">, </span><span class="s1">value: </span><span class="s2">'7188646706'</span><span class="s0">, </span><span class="s1">marked: </span><span class="s0">false</span><span class="s1">}</span>
+<span class="s1">]</span>
+
+<span class="s1">app.use(express.json())</span><span class="s3">// allows to work with requests</span>
+
+<span class="s3">// GET</span>
+<span class="s1">app.get(</span><span class="s2">'/api/contacts'</span><span class="s0">, </span><span class="s1">(req</span><span class="s0">, </span><span class="s1">res) =&gt; {</span>
+  <span class="s1">setTimeout(() =&gt; {</span>
+    <span class="s1">res.status(</span><span class="s4">200</span><span class="s1">).json(CONTACTS)</span><span class="s3">//SEVER is working so transfer contacts</span>
+  <span class="s1">}</span><span class="s0">, </span><span class="s4">1000</span><span class="s1">)</span>
+<span class="s1">})</span>
+
+<span class="s3">// POST</span>
+<span class="s1">app.post(</span><span class="s2">'/api/contacts'</span><span class="s0">, </span><span class="s1">(req</span><span class="s0">, </span><span class="s1">res) =&gt; {</span>
+  <span class="s0">const </span><span class="s1">contact = {...req.body</span><span class="s0">, </span><span class="s1">id: v4()</span><span class="s0">, </span><span class="s1">marked: </span><span class="s0">false</span><span class="s1">} </span><span class="s3">//based on theedata from client creates new element</span>
+  <span class="s1">CONTACTS.push(contact)</span>
+  <span class="s1">res.status(</span><span class="s4">201</span><span class="s1">).json(contact)</span><span class="s3">// new element (201 means element was created)</span>
+<span class="s1">})</span>
+
+<span class="s3">// DELETE</span>
+<span class="s1">app.delete(</span><span class="s2">'/api/contacts/:id'</span><span class="s0">, </span><span class="s1">(req</span><span class="s0">, </span><span class="s1">res) =&gt; {</span>
+  <span class="s1">CONTACTS = CONTACTS.filter(c =&gt; c.id !== req.params.id) </span><span class="s3">// id to know what element to delete</span>
+  <span class="s1">res.status(</span><span class="s4">200</span><span class="s1">).json({message: </span><span class="s2">'Contact was deleted'</span><span class="s1">})</span>
+<span class="s1">})</span>
+
+<span class="s3">// PUT</span>
+<span class="s1">app.put(</span><span class="s2">'/api/contacts/:id'</span><span class="s0">, </span><span class="s1">(req</span><span class="s0">, </span><span class="s1">res) =&gt; {</span>
+  <span class="s0">const </span><span class="s1">idx = CONTACTS.findIndex(c =&gt; c.id === req.params.id)</span>
+  <span class="s1">CONTACTS[idx] = req.body</span><span class="s3">// changes a contact in database</span>
+  <span class="s1">res.json(CONTACTS[idx])</span>
+<span class="s1">})</span>
+
+
+<span class="s1">app.use(express.static(path.resolve(__dirname</span><span class="s0">, </span><span class="s2">'client'</span><span class="s1">))) </span><span class="s3">//It is static because otherwise Client won't be able to find frontend'js file</span>
+<span class="s1">app.get(</span><span class="s2">'*'</span><span class="s0">, </span><span class="s1">(req</span><span class="s0">, </span><span class="s1">res) =&gt; {</span>
+  <span class="s1">res.sendFile(path.resolve(__dirname</span><span class="s0">, </span><span class="s2">'client'</span><span class="s0">, </span><span class="s2">'index.html'</span><span class="s1">))</span>
+<span class="s1">})</span>
+
+<span class="s1">app.listen(</span><span class="s4">3000</span><span class="s0">, </span><span class="s1">() =&gt; console.log(</span><span class="s2">'Server has been started on port 3000...'</span><span class="s1">))</span>
+</pre>
+</body>
+</html>
